@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import './index.css'
 import EventDetails from './Components/EventDetails.jsx';
+import ClubEvents from './Components/ClubEvents.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "eventdetails",
     element: <EventDetails/>,
+  },
+  {
+    path: "clubevents",
+    element: <ClubEvents/>,
   },
 ]);
 
