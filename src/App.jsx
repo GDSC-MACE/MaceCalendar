@@ -4,6 +4,7 @@ import AboutUs from './Components/AboutUs';
 import { SearchBar } from './Components/SearchBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import UpcomingEvents from './Components/UpcomingEvents';
+import Login from './Components/Login';
 import Footer from "./Components/Footer/Footer";
 import 'react-icons/fa';
 import Clubs from './Components/Clubs';
@@ -18,10 +19,8 @@ function App() {
           </div>
         </>
 
-      <div className="App">
-        <div className='search-bar-container'>
-          <SearchBar />
-        </div>
+      <div className=' m-12 ml-40 flex flex-col justify-center max-w-lg'>
+        <SearchBar />
       </div>
 
       <>
@@ -40,6 +39,10 @@ function App() {
       </>
 
       <AboutUs />
+
+      <div className='mt-80 pt-8 flex items-center justify-center'>
+        <Login/>
+      </div>
 
       <div>
       <div className="h-screen"></div>
