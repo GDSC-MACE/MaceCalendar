@@ -74,39 +74,21 @@ export default function Navbar() {
                             <li className="text-black hover:text-indigo-200">
                                 <a href="#">Contact US</a>
                             </li>
-                            
+                            <div className="mt-3 space-y-2 lg:hidden md:inline-block">
+                    <a
+                        href="#"
+                        className="inline-block w-full px-4 py-2 text-center text-gray-600  border-2 border-black rounded-md shadow hover:bg-gray-100"
+                    >
+                        Login
+                    </a>
+                    
+                </div>
                         </ul>
 
-                        <div className="mt-3 space-y-2 lg:hidden md:inline-block">
-                    <a
-                        href="#"
-                        className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
-                    >
-                        Sign in
-                    </a>
-                    <a
-                        href="#"
-                        className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-                    >
-                        Sign up
-                    </a>
-                </div>
+                       
                     </div>
                 </div>
-                <div className="hidden space-x-2 md:inline-block">
-                    <a
-                        href="#"
-                        className="px-4 py-2  text-xl text-black border-2 border-black rounded-md shadow-xl hover:bg-gray-100"
-                    >
-                        Sign in
-                    </a>
-                    <a
-                        href="#"
-                        className="px-4 py-2 text-xl text-black border-2 border-black  rounded-md shadow-xl hover:bg-gray-100"
-                    >
-                        Sign up
-                    </a>
-                </div>
+                
             </div>
         </nav>
     );
