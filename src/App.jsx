@@ -41,10 +41,11 @@ function App() {
             
           </div>
           <Clubs/>
+          <AboutUs />
         </section>
       </>
 
-      <AboutUs />
+      
 
       <div className='mt-80 pt-8 flex items-center justify-center'>
         <Login/>
