@@ -6,6 +6,7 @@ import { SearchBar } from './Components/SearchBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Filter from './Components/filter';
 import UpcomingEvents from './Components/UpcomingEvents';
+import Login from './Components/Login';
 import Footer from "./Components/Footer/Footer";
 import 'react-icons/fa';
 import Clubs from './Components/Clubs';
@@ -44,6 +45,10 @@ function App() {
       </>
 
       <AboutUs />
+
+      <div className='mt-80 pt-8 flex items-center justify-center'>
+        <Login/>
+      </div>
 
       <div>
       <div className="h-screen"></div>
