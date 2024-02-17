@@ -8,7 +8,7 @@ import { FreeMode, Pagination } from "swiper/modules";
 
 import { RxArrowTopRight } from "react-icons/rx";
 import { ServiceData } from "../constants/cons";
-
+import { Link } from "react-router-dom";
 const Clubs = () => {
   return (
     <div className="flex items-center justify-center flex-col h-screen bg-white">
@@ -45,7 +45,7 @@ const Clubs = () => {
                
                 <p className="py-4 lg:text-[18px]">{item.content} </p>
                 <button className="w-[70px] h-[70px] text-white font-bold border-t border-b rounded mx-auto">
-  View Events
+                <Link to="/clubevents">View Events</Link>
 </button>
 
               </div>

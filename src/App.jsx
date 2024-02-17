@@ -1,8 +1,10 @@
 import './App.css';
 import Navbar from './Components/Navbar';
+import Hero from './Components/hero';
 import AboutUs from './Components/AboutUs';
 import { SearchBar } from './Components/SearchBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Filter from './Components/filter';
 import UpcomingEvents from './Components/UpcomingEvents';
 import Login from './Components/Login';
 import Footer from "./Components/Footer/Footer";
@@ -13,14 +15,18 @@ function App() {
     <>
         <>
           <Navbar />
-          <div className="heading-container">
+          <Hero />
+          <div className="heading-container" id="upcoming-events">
             <h1 className="text-6xl font-extrabold text-black mb-4 mt-8 ">UPCOMING EVENTS</h1>
             
           </div>
         </>
 
-      <div className=' m-12 ml-40 flex flex-col justify-center max-w-lg'>
-        <SearchBar />
+      <div className="App">
+        <Filter/>
+        <div className='search-bar-container'>
+          <SearchBar />
+        </div>
       </div>
 
       <>
