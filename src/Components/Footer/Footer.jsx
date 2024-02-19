@@ -29,10 +29,10 @@ const Footer = () => {
 
         {/* Second Row */}
         <div className="w-full md:w-auto mb-4 md:mb-0 flex flex-col md:flex-row md:space-x-12">
-          <a href="#" className="hover:text-gray-300">Home</a>
-          <a href="#" className="hover:text-gray-300">Upcoming Events</a>
-          <a href="#" className="hover:text-gray-300">Clubs</a>
-          <a href="#" className="hover:text-gray-300">About Us</a>
+          <a href="#hero" className="hover:text-gray-300">Home</a>
+          <a href="#upcoming-events" className="hover:text-gray-300">Upcoming Events</a>
+          <a href="#clubs" className="hover:text-gray-300">Clubs</a>
+          <a href="#aboutus" className="hover:text-gray-300">About Us</a>
           <a href="#" className="hover:text-gray-300">Contact Us</a>
         </div>
 

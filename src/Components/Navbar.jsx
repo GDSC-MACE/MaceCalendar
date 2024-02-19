@@ -69,7 +69,7 @@ export default function Navbar() {
                                 </a>
                             </li>
                             <li className="text-black hover:text-indigo-200">
-                                <a href="#upcomingevents" onClick={() => scrollToSection("upcoming-events")}>
+                                <a href="#upcoming-events" onClick={() => scrollToSection("upcoming-events")}>
                                     Upcoming Events
                                 </a>
                             </li>
