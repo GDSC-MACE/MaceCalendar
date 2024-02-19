@@ -3,8 +3,15 @@ import { useState } from "react";
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
 
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
-      <nav className="w-full bg-white rounded-2xl shadow-2xl text-black">
+        <nav className="w-full bg-white rounded-2xl shadow-2xl text-black">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -57,38 +64,41 @@ export default function Navbar() {
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-2xl font-bold">
                             <li className="text-black hover:text-indigo-200">
-
-                                
-                                <a href="#">Home</a>
-
+                                <a href="#hero" onClick={() => scrollToSection("hero")}>
+                                    Home
+                                </a>
                             </li>
                             <li className="text-black hover:text-indigo-200">
-                                <a href="#">Upcoming Events</a>
+                                <a href="#upcomingevents" onClick={() => scrollToSection("upcoming-events")}>
+                                    Upcoming Events
+                                </a>
                             </li>
                             <li className="text-black hover:text-indigo-200">
-                                <a href="#">Clubs</a>
+                                <a href="#clubs" onClick={() => scrollToSection("clubs")}>
+                                    Clubs
+                                </a>
                             </li>
                             <li className="text-black hover:text-indigo-200">
-                                <a href="#">About US</a>
+                                <a href="#aboutus" onClick={() => scrollToSection("about-us")}>
+                                    About Us
+                                </a>
                             </li>
                             <li className="text-black hover:text-indigo-200">
-                                <a href="#">Contact US</a>
+                                <a href="#" onClick={() => scrollToSection("contact-us")}>
+                                    Contact Us
+                                </a>
                             </li>
-                            <div className="mt-3 space-y-2 lg:hidden md:inline-block">
-                    <a
-                        href="#"
-                        className="inline-block w-full px-4 py-2 text-center text-gray-600  border-2 border-black rounded-md shadow hover:bg-gray-100"
-                    >
-                        Login
-                    </a>
-                    
-                </div>
+                            <li>
+                                <a
+                                    href="#login"
+                                    className="inline-block px-4 py-2 text-center text-gray-600 border-2 border-black rounded-md shadow hover:bg-gray-100"
+                                >
+                                    Login
+                                </a>
+                            </li>
                         </ul>
-
-                       
                     </div>
                 </div>
-                
             </div>
         </nav>
     );

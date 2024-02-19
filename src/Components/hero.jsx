@@ -2,7 +2,7 @@ import React from 'react';
 import "./hero.css";
 const Hero = () => {
     return (
-  <div className="hero">
+  <div className="hero" id='hero'>
     <div className="hero-flex">
       <div className="hero-text">
         <h1 className="hero__title">GDSC Event Calendar</h1>

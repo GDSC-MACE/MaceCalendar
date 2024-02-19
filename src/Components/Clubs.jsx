@@ -10,8 +10,9 @@ import { RxArrowTopRight } from "react-icons/rx";
 import { ServiceData } from "../constants/cons";
 import { Link } from "react-router-dom";
 const Clubs = () => {
+ 
   return (
-    <div className="flex items-center justify-center flex-col h-screen bg-white">
+    <div id='clubs'  className="flex items-center justify-center flex-col h-screen bg-white">
       <Swiper
         breakpoints={{
           340: {
