@@ -1,8 +1,10 @@
 import React from 'react';
 
 const AboutUs = () => {
+  
   return (
-    <div className="max-w-screen-lg mx-auto flex ml-5 w-full h-96">
+    
+    <div id='aboutus' className="max-w-screen-lg mx-auto flex ml-5 w-full h-96">
       <div className="flex-1 photo grid grid-cols-3 gap-4">
         <img src="https://tse3.mm.bing.net/th?id=OIP.h-g6x28CCi-SMzfGWdfzoQHaHa&pid=Api&P=0&h=180" alt="img" className="pt-8 w-full h-full object-cover" />
         <img src="https://tse3.mm.bing.net/th?id=OIP.QXkORNsTeQu-5EBDweBRSgHaHa&pid=Api&P=0&h=180" alt="img" className="pt-8 w-full h-full object-cover" />
