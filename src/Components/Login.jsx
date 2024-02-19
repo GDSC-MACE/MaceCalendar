@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import React from 'react';
+import Footer from './Footer/Footer';
+import Navbar from './Navbar';
 const Login = () => {
     
     return (
-        <div id='login'>
+        
+        <div >
+            <Navbar/>
+            <div className='mt-50 pt-5 flex items-center justify-center'>
             <div className="w-[500px] bg-slate-800 border border-slate-600 rounded-md p-8 shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-30 relative ">
                 <h1 className="font-bold text-3xl text-slate-800 text-center">Login</h1>
                 <form action="/adminpanel" method="POST">
@@ -18,7 +24,11 @@ const Login = () => {
                       Login 
                     </button>
                 </form>
+                </div>
             </div>
+            
+            
+            
         </div>
     );
 

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
@@ -15,7 +16,7 @@ export default function Navbar() {
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                        <a href="#">
+                        <a href="/#hero">
                             <h2 className="text-2xl font-bold text-black">LOGO</h2>
                         </a>
                         <div className="md:hidden">
@@ -64,7 +65,7 @@ export default function Navbar() {
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-2xl font-bold">
                             <li className="text-black hover:text-indigo-200">
-                                <a href="#hero" onClick={() => scrollToSection("hero")}>
+                                <a href="/#hero" onClick={() => scrollToSection("hero")}>
                                     Home
                                 </a>
                             </li>
@@ -89,12 +90,9 @@ export default function Navbar() {
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href="#login"
-                                    className="inline-block px-4 py-2 text-center text-gray-600 border-2 border-black rounded-md shadow hover:bg-gray-100"
-                                >
-                                    Login
-                                </a>
+                                <div className="inline-block px-4 py-2 text-center text-gray-600 border-2 border-black rounded-md shadow hover:bg-gray-100">
+                                    <Link to="/login">Login</Link>
+                                </div>
                             </li>
                         </ul>
                     </div>

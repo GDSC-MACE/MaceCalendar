@@ -47,9 +47,7 @@ function App() {
 
       
 
-      <div className='mt-80 pt-8 flex items-center justify-center'>
-        <Login/>
-      </div>
+      
 
       <div>
       <div className="h-screen"></div>
