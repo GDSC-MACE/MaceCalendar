@@ -10,6 +10,7 @@ import Login from './Components/Login';
 import Footer from "./Components/Footer/Footer";
 import 'react-icons/fa';
 import Clubs from './Components/Clubs';
+import ContactUs from './Components/ContactUs';
 function App() {
   return (
     <>
@@ -42,17 +43,18 @@ function App() {
           </div>
           <Clubs/>
           <AboutUs />
-        </section>
-      </>
-
+          </section>
+       
       
+          <section className="contact-section">
+            <ContactUs/>
+          </section>
 
-      
-
+          </>
       <div>
       <div className="h-screen"></div>
       <Footer />
-    </div>
+    </div> 
     </>
      
   );
