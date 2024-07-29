@@ -28,6 +28,7 @@ const Hero = () => {
         <div className="opacity-0 hero-image">
           <img src="../assets/event.avif" alt="Event Calendar" />
         </div>
+        {/* <div className=" w-full"><iframe src="https://giphy.com/embed/3xz2BXmsnwlfAyuJGM" width="100%" height="100%"  allowFullScreen></iframe></div> */}
       </div>
       <div className="cube" />
       <div className="cube" />

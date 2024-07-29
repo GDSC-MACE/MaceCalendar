@@ -12,10 +12,10 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <UpcomingEvents />
-      <Clubs />
+      {/* <UpcomingEvents />
+      <Clubs /> */}
       {/* <AboutUs /> */}
-      <ContactUs />
+      {/* <ContactUs /> */}
       <Footer />
     </>
   );
