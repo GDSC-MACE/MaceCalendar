@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+::-webkit-scrollbar{
+  display: none;
+}
 .hero {
   background-color: #0040c1;
   background-image: linear-gradient(
