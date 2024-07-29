@@ -48,3 +48,8 @@
 .contact-section {
   padding-top: 100px;
 }
+/* Custom CSS */
+.clubs-footer:hover a:not(:hover) {
+  transform: scale(0.9);
+  opacity: 0.8; /* Optional: reduce opacity for better effect */
+}
