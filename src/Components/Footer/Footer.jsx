@@ -73,11 +73,11 @@ const Footer = () => {
           <div className="col-span-1   md:col-span-5 flex-col gap-5 justify-center">
           <h1 className="text-lg font-semibold">Our clubs</h1>
           <div className=" flex flex-col">
-          <div className=" flex flex-wrap gap-2 p-2 justify-center">
+          <div className=" clubs-footer flex flex-wrap gap-2 p-2 justify-center">
           {ServiceData.map((club,ind)=>club.tech&&
             <a key={club} href={club.url} className={` ease-linear duration-300 border border-blue-600  font-medium text-xs p-1 px-2 rounded-md hover:bg-blue-600`}>{club.title}</a>)}
           </div>
-          <div className=" flex flex-wrap gap-2 p-2 justify-center">
+          <div className="clubs-footer flex flex-wrap gap-2 p-2 justify-center">
           {ServiceData.map((club,ind)=>!club.tech&&
             <a key={club} href={club.url} className={`ease-linear duration-300 border border-green-600  font-medium text-xs p-1 px-2 rounded-md hover:bg-green-600`}>{club.title}</a>)}
           </div>
