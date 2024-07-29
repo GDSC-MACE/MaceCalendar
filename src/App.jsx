@@ -9,7 +9,7 @@ import Clubs from "./Components/Clubs";
 import ContactUs from "./Components/ContactUs";
 function App() {
   return (
-    <>
+    <div className=" overflow-hidden">
       <Navbar />
       <Hero />
       {/* <UpcomingEvents />
@@ -17,7 +17,7 @@ function App() {
       {/* <AboutUs /> */}
       {/* <ContactUs /> */}
       <Footer />
-    </>
+    </div>
   );
 }
 
