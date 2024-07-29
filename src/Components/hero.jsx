@@ -4,11 +4,11 @@ const Hero = () => {
   return <section className=" h-dvh bg-blue-700 overflow-hidden">
     <div className="grid grid-cols-1 md:grid-cols-2 h-dvh">
     <div className=" col-span-1 flex flex-col justify-center gap-2 items-center">
-    <h1 className=" text-slate-50 text-5xl font-bold">
-            <span className=" drop-shadow-2xl  text-red-400">G</span>
-            <span className=" drop-shadow-2xl  text-blue-400">D</span>
-            <span className=" drop-shadow-2xl  text-green-400">S</span>
-            <span className=" drop-shadow-2xl  text-yellow-400">C</span> Event
+    <h1 className=" text-slate-50 text-5xl font-bold px-1 drop-shadow-lg">
+            <span className="   text-red-400">G</span>
+            <span className="   text-blue-400">D</span>
+            <span className="   text-green-400">S</span>
+            <span className="   text-yellow-400">C</span> Event
             Calendar
           </h1>
           <p className=" text-white">
@@ -24,7 +24,7 @@ const Hero = () => {
          
     </div>
      <div className=" col-span-1 flex justify-center items-center">
-     <div className=" h-full"><iframe className=" pointer-events-none" src="https://giphy.com/embed/3xz2BXmsnwlfAyuJGM" width="100%" height="100%"  allowFullScreen></iframe></div> 
+     <div className=" h-full"><iframe className=" pointer-events-none drop-shadow-xl" src="https://giphy.com/embed/3xz2BXmsnwlfAyuJGM" width="100%" height="100%"  allowFullScreen></iframe></div> 
      </div>
     </div> 
      <div>

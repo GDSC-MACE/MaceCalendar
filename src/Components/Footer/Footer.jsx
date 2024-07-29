@@ -60,16 +60,16 @@ const Footer = () => {
     //   </div>
     // </footer>
     return (
-    <footer className="bg-gray-800 text-white p-2 md:p-4">
+    <footer className="bg-gray-800 text-white p-2 md:p-4 pt-6">
           <div className=" grid grid-cols-1 md:grid-cols-8 place-items-center"><div className="col-span-1 md:col-span-2 flex-col gap-1 items-center justify-center "><h1 className=" text-2xl font-bold text-blue-600">Event Calender</h1>
           <h2 className="font-mono text-sm">exclusive events page of MACE</h2>
-          <div className=" flex justify-center gap-2 mt-2">
-          <a href=""><img className=" opacity-90 hover:opacity-100" width="25" height="25" src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new--v1.png"  alt="instagram-new--v1"/></a>
-          <a href=""><img className=" opacity-90 hover:opacity-100" width="25" height="25" src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png"  alt="instagram-new--v1"/></a>
-          <a href=""><img className=" opacity-90 hover:opacity-100" width="25" height="25" src="https://img.icons8.com/ios-filled/50/FFFFFF/gmail-new.png"  alt="instagram-new--v1"/></a>
-          <a href=""><img className=" opacity-90 hover:opacity-100" width="25" height="25" src="https://img.icons8.com/ios-filled/50/FFFFFF/github.png"   alt="instagram-new--v1"/></a>
+          <div className=" flex justify-center gap-2 mt-3">
+          <a href=""><img className=" opacity-90 hover:opacity-100" width="23" height="23" src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new--v1.png"  alt="instagram-new--v1"/></a>
+          <a href=""><img className=" opacity-90 hover:opacity-100" width="23" height="23" src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png"  alt="instagram-new--v1"/></a>
+          <a href=""><img className=" opacity-90 hover:opacity-100" width="23" height="23" src="https://img.icons8.com/ios-filled/50/FFFFFF/gmail-new.png"  alt="instagram-new--v1"/></a>
+          <a href=""><img className=" opacity-90 hover:opacity-100" width="23" height="23" src="https://img.icons8.com/ios-filled/50/FFFFFF/github.png"   alt="instagram-new--v1"/></a>
           </div></div>
-          <div className=" col-span-1 my-3 md:m-0 h-[1px] w-full md:h-full md:w-[1.5px] rounded-md bg-blue-500"></div>
+          <div className=" col-span-1 my-5 md:m-0 h-[1px] w-full md:h-full md:w-[1.5px] rounded-md bg-blue-500"></div>
           <div className="col-span-1   md:col-span-5 flex-col gap-5 justify-center">
           <h1 className="text-lg font-semibold">Our clubs</h1>
           <div className=" flex flex-col">
