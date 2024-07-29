@@ -12,6 +12,13 @@
   );
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
+
+@layer utilities {
+  .text-outline {
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+      1px 1px 0 #ffffff;
+  }
+}
 * {
   scroll-behavior: smooth;
 }
