@@ -10,6 +10,7 @@ import EventDetails from './Components/EventDetails.jsx';
 import ClubEvents from './Components/ClubEvents.jsx';
 import AdminPanel from './Components/AdminPanel.jsx';
 import Login from './Components/Login.jsx';
+import UpcomingEvents from './Components/UpcomingEvents.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "adminpanel",
     element: <AdminPanel/>,
+  },
+  {
+    path: "upComingEvents",
+    element: <UpcomingEvents/>,
   },
 ]);
 
