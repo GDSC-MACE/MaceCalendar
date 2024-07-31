@@ -7,7 +7,9 @@ export default {
   theme: {
     screens: {
       'md': '900px',
+      'sm':'640px',
     },
+   
     extend: {
       backgroundColor: {
         '023440': '#023440',

@@ -2,6 +2,14 @@
 ::-webkit-scrollbar{
   display: none;
 }
+.hero_background
+{
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(25, 25, 255),
+    rgb(107, 52, 217)
+  );
+}
 .hero {
   background-color: #0040c1;
   background-image: linear-gradient(
