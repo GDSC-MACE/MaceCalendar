@@ -1,62 +1,85 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 
 function UpcomingEvents() {
-  const cardList = [
-    {
-      img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
-      title: "Event 1",
-      description: "Description for Event 1",
-    },
-    {
-      img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
-      title: "Event 2",
-      description: "Description for Event 2",
-    },
-    {
-      img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
-      title: "Event 3",
-      description: "Description for Event 3",
-    },
-    {
-      img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
-      title: "Event 3",
-      description: "Description for Event 3",
-    },
-    {
-      img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
-      title: "Event 3",
-      description: "Description for Event 3",
-    },
-    {
-      img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
-      title: "Event 3",
-      description: "Description for Event 3",
-    },
-    {
-      img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
-      title: "Event 3",
-      description: "Description for Event 3",
-    },
-    {
-      img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
-      title: "Event 3",
-      description: "Description for Event 3",
-    },
-    {
-      img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
-      title: "Event 3",
-      description: "Description for Event 3",
-    },
-    {
-      img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
-      title: "Event 3",
-      description: "Description for Event 3",
-    },
-  ];
+  const [events, setEvents] = useState([]);
 
-  
+  const fetchEvents = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/post/allposts");
+      if (!response.data.length) console.log("No upcoming events found.");
+      else {
+        setEvents(response.data);
+        console.log("Upcoming events fetched successfully:", response.data);
+        setEvents(response.data);
+      }
+    } catch (error) {
+      console.error("Error fetching events:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchEvents();
+  }, []);
+
+  useEffect(() => {
+    console.log("events:", events);
+  }, [events]);
+
+  // const cardList = [
+  //   {
+  //     img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
+  //     title: "Event 1",
+  //     description: "Description for Event 1",
+  //   },
+  //   {
+  //     img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
+  //     title: "Event 2",
+  //     description: "Description for Event 2",
+  //   },
+  //   {
+  //     img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
+  //     title: "Event 3",
+  //     description: "Description for Event 3",
+  //   },
+  //   {
+  //     img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
+  //     title: "Event 3",
+  //     description: "Description for Event 3",
+  //   },
+  //   {
+  //     img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
+  //     title: "Event 3",
+  //     description: "Description for Event 3",
+  //   },
+  //   {
+  //     img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
+  //     title: "Event 3",
+  //     description: "Description for Event 3",
+  //   },
+  //   {
+  //     img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
+  //     title: "Event 3",
+  //     description: "Description for Event 3",
+  //   },
+  //   {
+  //     img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
+  //     title: "Event 3",
+  //     description: "Description for Event 3",
+  //   },
+  //   {
+  //     img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
+  //     title: "Event 3",
+  //     description: "Description for Event 3",
+  //   },
+  //   {
+  //     img: "https://static.vecteezy.com/system/resources/thumbnails/006/692/012/small/calendar-date-date-notes-business-office-event-icon-template-black-color-editable-calendar-date-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg",
+  //     title: "Event 3",
+  //     description: "Description for Event 3",
+  //   },
+  // ];
 
   const SearchBar = (
     <form className="w-full mx-auto relative">
@@ -98,39 +121,85 @@ function UpcomingEvents() {
     </div>
   );
   const [clickedButton, setClickedButton] = useState(false);
-return <section className=" pb-2 bg-yellow-200 bg-opacity-5">
-  <div className=" sticky sm:fixed z-50 w-full bg-blue-500 place-content-center items-center grid grid-cols-1 sm:grid-cols-3 p-3 gap-x-3 shadow-xl">
-  <div className=" col-span-1">{SearchBar}</div>
-  <div className=" sm:col-span-2 col-span-1">{Filter}</div>
-  </div>
-  <div className="grid grid-rows-5 grid-cols-1 sm:grid-rows-1 sm:grid-cols-3 h-screen">
-   
-    <div className=" order-2 z-10 sm:order-1 row-span-4 sm:col-span-2 pt-0 sm:pt-24 overflow-y-auto">
-      <div className="grid grid-cols-1 mt-2 sm:grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-3 px-2">
-        {cardList.map((card, id) => (
-          <div className="relative w-fullmt-4 bg-black shadow-lg overflow-hidden group ease-in-out duration-300 rounded-md border-4 border-blue-50" key={id}>
-            <img src='https://i.pinimg.com/564x/1f/0b/73/1f0b7339068e298b27ba692300be40dd.jpg' alt="box_img" className="ease-in-out duration-300 w-full group-hover:scale-105 group-hover:opacity-70" />
-            <button onClick={()=>setClickedButton(!clickedButton)} className=" font-medium text-sm absolute bottom-0 left-0 w-full bg-slate-50 translate-y-full transition-transform ease-in-out duration-300 group-hover:translate-y-0">
-              See More
-            </button>
+  const [eventSet, setEventSet] = useState(false);
+  const [showEvent, setShowEvent] = useState([]);
+  const eventDetail = (event) => {
+    setShowEvent(event);
+    setEventSet(true);
+    setClickedButton(!clickedButton);
+  };
+
+  useEffect(() => {
+    console.log("show event: ", showEvent);
+  }, [showEvent]);
+
+  return (
+    <section className=" pb-2 bg-yellow-200 bg-opacity-5">
+      <div className=" sticky sm:fixed z-50 w-full bg-blue-500 place-content-center items-center grid grid-cols-1 sm:grid-cols-3 p-3 gap-x-3 shadow-xl">
+        <div className=" col-span-1">{SearchBar}</div>
+        <div className=" sm:col-span-2 col-span-1">{Filter}</div>
+      </div>
+      <div className="grid grid-rows-5 grid-cols-1 sm:grid-rows-1 sm:grid-cols-3 h-screen">
+        <div className=" order-2 z-10 sm:order-1 row-span-4 sm:col-span-2 pt-0 sm:pt-24 overflow-y-auto">
+          <div className="grid grid-cols-1 mt-2 sm:grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-3 px-2">
+            {events.map((event, id) => (
+              <div
+                className="relative w-fullmt-4 bg-black shadow-lg overflow-hidden group ease-in-out duration-300 rounded-md border-4 border-blue-50"
+                key={id}
+              >
+                <img
+                  src={event.image_url}
+                  alt="box_img"
+                  className="ease-in-out duration-300 w-full group-hover:scale-105 group-hover:opacity-70"
+                />
+                <button
+                  onClick={() => eventDetail(event)}
+                  className=" font-medium text-sm absolute bottom-0 left-0 w-full bg-slate-50 translate-y-full transition-transform ease-in-out duration-300 group-hover:translate-y-0"
+                >
+                  See More
+                </button>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+
+        <div
+          className={` order-1 relative z-40 overflow-scroll h-96 sm:h-auto sm:order-2 row-span-1 sm:col-span-1 bg-white border-b-2 sm:border-b-0 border-slate-400 sm:bg-yellow-400 sm:bg-opacity-20 shadow-inner ${
+            clickedButton ? "flex" : "hidden"
+          } sm:flex  flex-col pt-0 sm:pt-24 sm:px-2`}
+        >
+          <button
+            onClick={() => setClickedButton(false)}
+            className="flex sm:hidden shadow-lg bg-red-600 hover:bg-red-800 text-white justify-center items-center p-1 px-2 absolute left-2 rounded-md top-2"
+          >
+            close
+          </button>
+          <div>
+            <div className=" h-52  sm:h-auto overflow-scroll">
+              <img
+                src={eventSet ? showEvent.image_url : events[0]?.image_url}
+                alt="box_img"
+                className="ease-in-out duration-300 w-full group-hover:scale-105 group-hover:opacity-80"
+              />
+            </div>
+            <div className=" font-semibold">
+              <h3>{eventSet ? showEvent.event_name : events[0]?.event_name}</h3>
+              <p>{eventSet ? showEvent.description : events[0]?.description}</p>
+              <p>
+                {eventSet
+                  ? showEvent.event_date != null
+                    ? showEvent.event_date
+                    : "no date provided"
+                  : events[0]?.event_date != null
+                  ? events[0].event_date
+                  : "no date provided"}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    
-    
-     <div className={` order-1 relative z-40 overflow-scroll h-96 sm:h-auto sm:order-2 row-span-1 sm:col-span-1 bg-white border-b-2 sm:border-b-0 border-slate-400 sm:bg-yellow-400 sm:bg-opacity-20 shadow-inner ${clickedButton?'flex':'hidden'} sm:flex  flex-col pt-0 sm:pt-24 sm:px-2`}>
-      <button onClick={()=>setClickedButton(false)} className="flex sm:hidden shadow-lg bg-red-600 hover:bg-red-800 text-white justify-center items-center p-1 px-2 absolute left-2 rounded-md top-2">close</button>
-      <div>
-        <div className=" h-52  sm:h-auto overflow-scroll">
-        <img src='https://i.pinimg.com/564x/38/3a/37/383a37cb5cc56b92a7a2d96022a206bc.jpg' alt="box_img" className="ease-in-out duration-300 w-full group-hover:scale-105 group-hover:opacity-80" /></div>
-     <div className=" font-semibold">
-     hi <bR></bR>HI<bR></bR>HI<bR></bR>HI<bR></bR>HI<bR></bR>HI<bR></bR>HI<bR></bR>HI
-     </div> 
-      </div>
-    </div> 
-  </div>
-</section>
+    </section>
+  );
   return (
     <div className="flex flex-col">
       <div className="heading-container py-8 md:py-20" id="upcoming-events">
