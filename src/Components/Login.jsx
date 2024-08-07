@@ -16,19 +16,40 @@ const Login = () => {
       username: username,
       password: password,
     };
+
     try {
-      const response = await axios.post(
-        "http://localhost:3000/auth/login",
-        data
-      );
-      console.log(response);
+      console.log(data);
+
+      const response = await fetch("http://localhost:3000/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+        credentials: "include",
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const responseData = await response.json();
+      console.log(responseData);
+
       setUsername("");
       setPassword("");
-      const role = response.data.user.role;
-      console.log(role); // Debugging purpose only, remove before production
-      if (role === "admin") navigate("/adminpanel"); // Updated navigation
+
+      const role = responseData.user.role;
+      console.log(role);
+
+      if (role === "admin") {
+        navigate("/adminpanel");
+      } else {
+        alert("Wrong username or password");
+      }
     } catch (error) {
-      alert("Wrong username or password");
+      console.error("Error:", error);
+      alert("Failed to login. Please try again.");
     }
   };
 
