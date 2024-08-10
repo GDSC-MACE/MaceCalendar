@@ -41,9 +41,13 @@ const Login = () => {
 
       const role = responseData.user.role;
       console.log(role);
+      const userId = responseData.user.id;
+      console.log(userId);
 
       if (role === "admin") {
         navigate("/adminpanel");
+      } else if (role === "user") {
+        navigate("/clubpanel", { state: { userId } });
       } else {
         alert("Wrong username or password");
       }
