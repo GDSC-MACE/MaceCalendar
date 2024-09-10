@@ -8,7 +8,7 @@ function UpcomingEvents() {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/post/allposts");
+      const response = await axios.get("http://13.233.74.175/post/allposts");
       if (!response.data.length) console.log("No upcoming events found.");
       else {
         setEvents(response.data);

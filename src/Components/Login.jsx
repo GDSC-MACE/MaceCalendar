@@ -19,8 +19,8 @@ const Login = () => {
 
     try {
       console.log(data);
-
-      const response = await fetch("http://localhost:3000/auth/login", {
+      // console.log("API:", process.env.REACT_APP_API);
+      const response = await fetch(`http://13.233.74.175/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

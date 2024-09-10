@@ -55,13 +55,22 @@ const ClubPanel = () => {
 
     try {
       // Post data to the server
-      const response = await axios.post(
-        "http://localhost:3000/post/createPost",
-        formattedData,
-        { withCredentials: true } // Send cookies with the request
+      axios.defaults.withCredentials = true;
+      const response = await axios(
+        "http://13.233.74.175/post/createPost",
+        {
+          method: "post",
+          data: formattedData,
+          withCredentials: true,
+        } // Send cookies with the request
       );
 
-      console.log("Event saved successfully:", response.data);
+      // if (!response.ok) {
+      //   throw new Error(`HTTP error! status: ${response.status}`);
+      // }
+
+      const data = await response;
+      console.log("Event saved successfully:", data);
 
       // Clear the form after saving
       setNewEvent({
@@ -93,7 +102,7 @@ const ClubPanel = () => {
   const getClubEvents = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/post/uniqueposts/${userId}`,
+        `http://13.233.74.175/post/uniqueposts/${userId}`,
         {
           withCredentials: true,
         }
